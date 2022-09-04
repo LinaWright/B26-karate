@@ -26,3 +26,8 @@ Feature: Add new spartan
     Then status 200
     And match response == {id : '#(newSpartanId)', name : "karate", gender : "Male", phone : 1231231234}
 
+    #delete newly created spartan using newSpartanId
+    Given path "/spartans", newSpartanId
+    When method DELETE
+    Then status 204
+
