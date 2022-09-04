@@ -8,5 +8,4 @@ public class KarateRunner {
         return new Karate().relativeTo(getClass());
        // return Karate.run("get_spartans").tags("spartan").relativeTo(getClass());
     }
-
 }
