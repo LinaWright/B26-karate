@@ -32,3 +32,4 @@ Scenario: Search for spartans using query params
   And match each response.content[*].gender == "Female"
 
   #check if each name contains letter a
+   And match each karate.lowerCase(allNames) contains "a"
