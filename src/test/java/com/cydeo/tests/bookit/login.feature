@@ -11,4 +11,4 @@ Feature: Teacher user get authorization token
     When method GET
     Then status 200
     * def accessToken = response.accessToken
-    * print "accessToken = " , accessToken
+   # * print "accessToken = " , accessToken
