@@ -30,4 +30,3 @@ Feature: Add new spartan
     Given path "/spartans", newSpartanId
     When method DELETE
     Then status 204
-
