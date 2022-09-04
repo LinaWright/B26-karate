@@ -10,3 +10,5 @@ Feature: Teacher user get authorization token
     And path "/sign"
     When method GET
     Then status 200
+    * def accessToken = response.accessToken
+    * print "accessToken = " , accessToken
