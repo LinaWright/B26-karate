@@ -16,3 +16,13 @@ Feature: Add new spartan
     * print "message = " , successMsg
     And assert successMsg == "A Spartan is Born!"
     And assert response.data.name == "karate"
+    * def newSpartanId = response.data.id
+    * print "newSpartanId = " ,  newSpartanId
+
+    #send get request to /spartans/newSpartanId
+    Given header Accept = "application/json"
+    And path "/spartans" , newSpartanId
+    When method GET
+    Then status 200
+    And match response == {id : '#(newSpartanId)', name : "karate", gender : "Male", phone : 1231231234}
+
